@@ -3,17 +3,17 @@
 
   inputs = {
     fstar-src = {
-      url = "github:fstarlang/fstar";
+      url = "github:tahina-pro/fstar/taramana_dune";
       flake = false;
     };
     karamel-src = {
-      url = "github:fstarlang/karamel";
+      url = "github:fstarlang/karamel/taramana_fstar_dune";
       flake = false;
     };
     flake-utils.url = "flake-utils";
     nixpkgs.url = "nixpkgs/nixos-unstable";
     hacl = {
-      url = "github:hacl-star/hacl-star";
+      url = "github:hacl-star/hacl-star/taramana_fstar_dune";
       inputs = {
         fstar-src.follows = "fstar-src";
         karamel-src.follows = "karamel-src";
