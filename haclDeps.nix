@@ -4,7 +4,7 @@ let
   ocamlPackages = pkgs.ocaml-ng.ocamlPackages_4_12;
   z3 = pkgs.callPackage ./z3 { };
   vale = pkgs.callPackage ./vale { };
-  libFstar = pkgs.callPackage ./fstar/lib.nix { inherit ocamlPackages z3; };
+  libFstar = pkgs.callPackage ./fstar/fstar.nix { inherit ocamlPackages z3; };
   fstar = libFstar.binary-of-ml-snapshot {
     pname = "fstar";
     version = fstar-src.rev;
